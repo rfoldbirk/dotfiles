@@ -31,3 +31,13 @@ function gm() {
 function ga() {
   git add .
 }
+
+function gp() {
+  git push
+}
+
+function gmp() {
+  git add .
+  git commit -m $1
+  git push
+}
