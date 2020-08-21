@@ -1,9 +1,14 @@
+PATH="/Library/Frameworks/Python.framework/Versions/3.1/bin:${PATH}"
 export PATH=/usr/local/bin:$PATH
+export HOMEBREW_NO_AUTO_UPDATE=1
 
-fpath+=$HOME/.zsh/pure
+cd ~/Programmering
+
+fpath+=$HOME/.zsh/typewritten
 autoload -U promptinit; promptinit
-prompt pure
+prompt typewritten
 
+# pure og...
 # typewritten er også et godt tema
 
 function ezsh() {
@@ -12,4 +17,17 @@ function ezsh() {
 
 function rzsh() {
   source ~/.zshrc
+}
+
+function gs() {
+  git status
+}
+
+function gm() {
+  git add .
+  git commit -m $1
+}
+
+function ga() {
+  git add .
 }
