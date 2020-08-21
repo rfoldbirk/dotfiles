@@ -1,0 +1,15 @@
+export PATH=/usr/local/bin:$PATH
+
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+prompt pure
+
+# typewritten er også et godt tema
+
+function ezsh() {
+  vim ~/.zshrc
+}
+
+function rzsh() {
+  source ~/.zshrc
+}
