@@ -2,6 +2,12 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.1/bin:${PATH}"
 export PATH=/usr/local/bin:$PATH
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+
+autoload -U compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+
+
 cd ~/Programmering
 
 fpath+=$HOME/.zsh/typewritten
@@ -23,7 +29,7 @@ function gs() {
   git status
 }
 
-function gm() {
+function gc() {
   git add .
   git commit -m $1
 }
@@ -36,7 +42,7 @@ function gp() {
   git push
 }
 
-function gmp() {
+function gcp() {
   git add .
   git commit -m $1
   git push
