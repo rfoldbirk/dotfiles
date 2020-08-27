@@ -6,7 +6,7 @@
     "editor.dragAndDrop": true,
     "editor.folding": false,
     "editor.showFoldingControls": "mouseover",
-    "editor.fontFamily": "Fira Code",
+    "editor.eFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "editor.glyphMargin": true,

@@ -2,7 +2,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.1/bin:${PATH}"
 export PATH=/usr/local/bin:$PATH
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-
+# insensitiv autocompletion
 autoload -U compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
@@ -10,19 +10,36 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
 cd ~/Programmering
 
+# pure eller typewritten
 fpath+=$HOME/.zsh/typewritten
 autoload -U promptinit; promptinit
 prompt typewritten
 
-# pure og...
-# typewritten er også et godt tema
+TYPEWRITTEN_SYMBOL="🚀"
+TYPEWRITTEN_DISABLE_RETURN_CODE=true
+TYPEWRITTEN_GIT_RELATIVE_PATH=true
+
 
 function ezsh() {
-  vim ~/.zshrc
+  nvim ~/.zshrc
 }
 
 function rzsh() {
   source ~/.zshrc
+}
+
+function helpme() {
+  echo "Git kommandoer:"
+  echo "gs - git status"
+  echo "gc - git commit -m ..."
+  echo "ga - git add ."
+  echo "gp - git push"
+  echo "gcp - ga + gc + gp"
+  echo ""
+  echo "Andet:"
+  echo "ezsh - nvim .zshrc"
+  echo "rzsh - source .zshrc"
+
 }
 
 function gs() {
