@@ -32,6 +32,8 @@ nnoremap <Leader>w :b <CR>
 nnoremap <Leader>q <C-t>
 nnoremap <Leader>m :MakeTags<CR><CR>
 
+map <Leader>p <ESC>:w<CR><C-l>a python3 main.py<CR>
+map <Leader>t <ESC>:set autoindent noexpandtab tabstop=4 shiftwidth=4<CR>
 " Scrolling og desværre også musseklik :(
 set mouse=a
 map <ScrollWheelUp> <C-Y>
