@@ -48,10 +48,6 @@ brew cask install 'postman' > /dev/null 2>&1
 mas install 1518425043 > /dev/null 2>&1 # boop
 mas install 1176074088 > /dev/null 2>&1 # termius
 
-# Open in...
-brew cask install 'openinterminal-lite' > /dev/null 2>&1
-brew cask install 'openineditor-lite' > /dev/null 2>&1
-
 # Trello
 mas install 1278508951 > /dev/null 2>&1 # trello
 
@@ -74,7 +70,6 @@ mas install 409201541 > /dev/null 2>&1 # pages
 # Dejlige små programmer
 brew cask install 'nightowl' > /dev/null 2>&1
 brew cask install 'maccy' > /dev/null 2>&1 # clipboard manager
-brew cask install 'enpass' > /dev/null 2>&1 # et værktøj, som kan
 brew cask install 'flux' > /dev/null 2>&1 # behøver jeg forklare
 brew cask install 'enjoyable' > /dev/null 2>&1 # controller mapper
 mas install 836505650 > /dev/null 2>&1 # battery monitor
