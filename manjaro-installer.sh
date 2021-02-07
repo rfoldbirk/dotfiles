@@ -3,7 +3,7 @@ sadsddd
 sudo pacman -Syu --noconfirm
 
 
-sudo pacman -S xdotool alacritty neovim nodejs npm nvm nmap --noconfirm
+sudo pacman -S xdotool alacritty neovim nodejs npm nmap --noconfirm
 sudo pacman -S virt-manager uluancher discord --noconfirm
 
 pamac build spotify

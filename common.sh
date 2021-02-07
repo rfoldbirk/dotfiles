@@ -11,6 +11,9 @@ cp -R ./alacritty.yml $HOME/.config/alacritty/
 mkdir -p "$HOME/.zsh"
 git clone https://github.com/reobin/typewritten.git "$HOME/.zsh/typewritten"
 
+# NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
 # zsh indstillinger
 cp ./zsh $HOME/.zshrc
 
