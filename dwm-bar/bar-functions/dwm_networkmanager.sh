@@ -12,13 +12,13 @@ dwm_networkmanager () {
         CONNAME=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -c 5-)
     fi
 
-    PRIVATE=$(nmcli -a | grep 'inet4 192' | awk '{print $2}')
-    PUBLIC=$(curl -s https://ipinfo.io/ip)
+    PRIVATE=$(nmcli -a | grep 'inet4' | awk '{print $2}')
+    #PUBLIC=$(curl -s https://ipinfo.io/ip)
 
     if [ "$IDENTIFIER" = "unicode" ]; then
-        export __DWM_BAR_NETWORKMANAGER__="${SEP1}🌐 ${CONNAME} ${PRIVATE} ${PUBLIC}${SEP2}"
+        export __DWM_BAR_NETWORKMANAGER__="${SEP1}🌐 ${CONNAME}${SEP2}"
     else
-        export __DWM_BAR_NETWORKMANAGER__="${SEP1}NET ${CONNAME} ${PRIVATE} ${PUBLIC}${SEP2}"
+        export __DWM_BAR_NETWORKMANAGER__="${SEP1}NET ${CONNAME}${SEP2}"
     fi
 }
 
