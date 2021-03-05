@@ -9,5 +9,6 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 Plug 'joshdick/onedark.vim'
+Plug '907th/vim-auto-save'
 
 call plug#end()

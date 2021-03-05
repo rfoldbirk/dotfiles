@@ -11,7 +11,8 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " I hate escape more than anything else
 inoremap jk <Esc>
 inoremap kj <Esc>
-
+inoremap <C-b> <Esc>:w<CR>:!xdotool search -name "Alacritty - Main" key ctrl+c ctrl+l m a k e space r u n Return<CR><CR>
+nnoremap <C-b> <Esc>:!xdotool search -name "Alacritty - Main" key ctrl+c ctrl+l m a k e space r u n Return<CR><CR>
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
@@ -40,7 +41,7 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
 " Side bar
-map <C-b> <Esc>:edit .<CR>/main<CR>v:vertical resize +100<CR>:vertical resize -22<CR>:noh<CR>
+map <C-k> <Esc>:edit .<CR>/main<CR>v:vertical resize +100<CR>:vertical resize -22<CR>:noh<CR>
 " Align side bar
 map <Leader>a :vertical resize +100<CR>:vertical resize -22<CR>:noh<CR>
 " Søg i alle filer

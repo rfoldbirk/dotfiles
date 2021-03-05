@@ -1,0 +1,22 @@
+#/bin/bash
+
+#Status Bar for DWM
+sh ~/Programmering/dwm-stuff/dwm-bar/dwm_bar.sh &
+xbindkeys &
+
+# Skruer op for lyden
+pactl set-sink-volume 1 100%
+
+# Frame rate til 144
+xrandr --output DP-1 --mode 1920x1080 --rate 144
+
+# Baggrund
+xsetroot -solid black
+feh --bg-scale ~/Pictures/Wallpapers/'solarsystem.jpg'
+
+# Tastatur layout
+xkbcomp -w 0 ~/xkbmap $DISPLAY
+xmodmap -e "keycode 52 = z Z z Z less greater"
+
+# Starter Spotify
+spotify &

@@ -22,14 +22,6 @@ prompt typewritten
 
 
 
-function ezsh() {
-  nvim ~/.zshrc
-}
-
-function rzsh() {
-  source ~/.zshrc
-}
-
 
 r_last_dir=$(pwd)
 r_save_dir=$(pwd)
@@ -43,19 +35,20 @@ function sd() {
   echo "-- Path has been saved"
 }
 
-function u() {
-  cd $r_last_dir
-}
+alias mdwm="cd ~/Programmering/dwm-stuff/dwm; sudo make clean install"
+alias edwm="nvim ~/Programmering/dwm-stuff/dwm/config.h"
+alias ezsh="nvim ~/.zshrc"
+alias rzsh="source ~/.zshrc"
 
-function bb() {
-  cd $r_save_dir
-}
+alias u="cd $r_last_dir"
+alias bb="cd $r_save_dir"
 
+alias gs="git status"
+alias gp="git push"
 
+alias ssh-skole="ssh root@144.91.81.98"
+alias ssh-skole-rfb="ssh rasmus@144.91.81.98"
 
-function gs() {
-  git status
-}
 
 function gc() {
   git add .
@@ -66,10 +59,6 @@ function ga() {
   git add $1
 }
 
-function gp() {
-  git push
-}
-
 function gcp() {
   git add .
   git commit -m $1
@@ -77,5 +66,5 @@ function gcp() {
 }
 
 function gcl() {
-	git clone https://github.com/$1 $2 $3 $4 $5
+  git clone https://github.com/$1 $2 $3 $4 $5
 }
