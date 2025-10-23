@@ -1,0 +1,37 @@
+autoload -Uz vcs_info
+autoload -U compinit
+compinit
+setopt prompt_subst
+
+precmd() { vcs_info }
+
+# Enable git support and format the output
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes false
+zstyle ':vcs_info:git:*' formats '%b'
+zstyle ':vcs_info:git:*' actionformats '%b|%a'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+PS1='%F{blue}%B%~%b%f %F{blue}[ ${vcs_info_msg_0_} ]%f '
+
+HISTFILE=~/.history
+HISTSIZE=100000
+SAVEHIST=100000
+
+export EDITOR="hx"
+
+# essentials
+alias z="zellij attach main" # creates if it doesn't exist
+alias b='cd ..'
+alias ezsh='hx ~/.zshrc'
+alias rzsh='source ~/.zshrc'
+alias lg='lazygit'
+
+# databaser
+alias mysql='nix-shell ~/.dotfiles/macos/nix-shells/mysql-shell.nix';
+alias maria='nix-shell ~/.dotfiles/macos/nix-shells/mariadb-shell.nix';
+
+# hemmeligt 🤫
+if [ -f ~/.zsh-private/aliases.sh ]; then
+    source ~/.zsh-private/aliases.sh
+fi

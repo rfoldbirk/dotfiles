@@ -1,0 +1,54 @@
+theme = "edge"
+
+[editor]
+line-number = "relative"
+# continue-comments = false
+mouse = true
+# bufferline = "always"
+auto-format = false
+
+[editor.soft-wrap]
+enable = true
+# wrap-indicator = "↳"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal.space.w]
+d = ["vsplit", "goto_definition"]
+q = [":buffer-close", "wclose"]
+
+[keys.normal."+"]
+"+" = ":config-reload"
+o = ":config-open"
+
+[keys.normal."g"]
+v = ["vsplit", "goto_definition"]
+
+[keys.normal]
+C-b = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
+C-w = ":bc"
+C-s = ":w"
+C-d = ["scroll_down","scroll_down","scroll_down","scroll_down","scroll_down"]
+C-u = ["scroll_up","scroll_up","scroll_up","scroll_up","scroll_up"]
+
+[keys.insert]
+C-d = ["scroll_down","scroll_down","scroll_down","scroll_down","scroll_down"]
+C-u = ["scroll_up","scroll_up","scroll_up","scroll_up","scroll_up"]
+C-s = ":w"
+
+[keys.select]
+C-d = ["scroll_down","scroll_down","scroll_down","scroll_down","scroll_down"]
+C-u = ["scroll_up","scroll_up","scroll_up","scroll_up","scroll_up"]
+C-s = ":w"
+
+
+[editor.lsp]
+# display-inlay-hints = true
+# inlay-hints-length-limit = 2
+
