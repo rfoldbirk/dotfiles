@@ -2,10 +2,11 @@ theme = "edge"
 
 [editor]
 line-number = "relative"
-# continue-comments = false
+continue-comments = false
 mouse = true
 # bufferline = "always"
 auto-format = false
+
 
 [editor.soft-wrap]
 enable = true
@@ -30,7 +31,10 @@ o = ":config-open"
 [keys.normal."g"]
 v = ["vsplit", "goto_definition"]
 
+
 [keys.normal]
+# w = ["move_next_word_start", "collapse_selection"]
+# b = ["move_prev_word_start", "collapse_selection"]
 C-b = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
 C-w = ":bc"
 C-s = ":w"
@@ -46,6 +50,9 @@ C-s = ":w"
 C-d = ["scroll_down","scroll_down","scroll_down","scroll_down","scroll_down"]
 C-u = ["scroll_up","scroll_up","scroll_up","scroll_up","scroll_up"]
 C-s = ":w"
+w = ["normal_mode", "move_next_word_start"]
+b = ["normal_mode", "move_prev_word_start"]
+e = ["normal_mode", "move_next_word_end"]
 
 
 [editor.lsp]

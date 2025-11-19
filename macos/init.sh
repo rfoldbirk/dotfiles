@@ -8,4 +8,4 @@ ln -sfn /Users/rasmusfoldberg/.dotfiles/macos/home-manager /Users/rasmusfoldberg
 ln -sfn /Users/rasmusfoldberg/.dotfiles/macos/zellij /Users/rasmusfoldberg/.config 
 
 # ZSH
-ln -sfn /Users/rasmusfoldberg/.dotfiles/macos/zshrc /Users/rasmusfoldberg/.zshrc
+ln -sfn /Users/rasmusfoldberg/.dotfiles/macos/.zshrc /Users/rasmusfoldberg/.zshrc

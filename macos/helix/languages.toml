@@ -1,2 +1,21 @@
-[language-server.jdtls.config.java.inlayHints]
-parameterNames.enabled = "all"
+[language-server.tinymist]
+command = "tinymist"
+config.exportPdf = "onSave" # "onSave" or "onType"
+
+[language-server]
+jdtls = { command = "jdtls" }
+language-server = { command = "jdtls", args = [
+  "-data", "/Users/rasmusfoldberg/.cache/jdtls/workspace"
+  ]}
+
+[[language]]
+name = "typst"
+formatter = { command = "typstfmt", args = ["--output", "-"] }
+auto-format = true
+# name = "java"
+# scope = "source.java"
+# injection-regex = "java"
+# file-types = ["java"]
+# roots = ["pom.xml", "build.gradle", ]
+# indent = { tab-width = 4, unit = "    " }
+# language-servers = [ "jdtls" ]

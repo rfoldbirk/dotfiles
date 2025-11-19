@@ -7,15 +7,34 @@
   home.stateVersion = "24.05"; # ← ADD THIS LINE
 
   home.packages = with pkgs; [
-    helix
-    btop
+    # nix
     home-manager
+    
+    # languages
+    go
+    nodejs_24
+
+    # language servers
+    jdt-language-server
+    gopls
+
+    # cli tools
+    helix
     zellij
     ripgrep
     bat
+    eza # better ls
+    fzf # fuzzy finder
+    zoxide # cd
+    fd # find
     lazygit
+
+    # tools
+    typst
+    tinymist
     nginx
-    nodejs_24
+
+    # other dependencies
     yt-dlp
     ffmpeg
   ];
