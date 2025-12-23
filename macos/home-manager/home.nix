@@ -20,6 +20,7 @@
 
     # cli tools
     helix
+    neovim
     zellij
     ripgrep
     bat
@@ -28,14 +29,19 @@
     zoxide # cd
     fd # find
     lazygit
+    nmap
 
     # tools
     typst
     tinymist
     nginx
+    raylib
+    rPackages.pkgconfig
 
     # other dependencies
+    xz
     yt-dlp
     ffmpeg
+    neofetch
   ];
 }
